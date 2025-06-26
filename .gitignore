@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django database
+db.sqlite3
+*.sqlite3
+
+# Django migrations (you can exclude these if you want to track schema changes)
+**/migrations/
+!*/migrations/__init__.py
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# Python virtual environments
+venv/
+myvenv/
+.venv/
+
+# pip files
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Gunicorn/PID files (if deployed)
+*.pid
+
+# Passenger restart file
+tmp/
+passenger_wsgi.py
+
+# Compiled translations
+*.mo
+
+# Coverage
+.coverage
+htmlcov/
