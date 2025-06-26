@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["hirbots.com","www.hirbots.com"]
 CSRF_TRUSTED_ORIGINS = ["https://hirbots.com","https://www.hirbots.com"]
-# SECURE_SSL_REDIRECT = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # Application definitionasfdasfd
 
