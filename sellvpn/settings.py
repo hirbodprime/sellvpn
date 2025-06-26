@@ -33,6 +33,7 @@ CSRF_COOKIE_SECURE = True
 
 # Application definitionasfdasfd
 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
