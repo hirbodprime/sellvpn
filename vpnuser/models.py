@@ -24,6 +24,21 @@ class SubscriptionPlan(models.Model):
     def __str__(self):
         return self.label
 
+class VPNShowcaseConfig(models.Model):
+    TYPE_CHOICES = [
+        ('volume', 'حجمی'),
+        ('unlimited', 'نامحدود'),
+    ]
+
+    type = models.CharField(max_length=20, choices=TYPE_CHOICES)
+    subscription_plan = models.ForeignKey(SubscriptionPlan, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    bandwidth_gb = models.IntegerField(null=True, blank=True)
+    price_toman = models.IntegerField()
+    active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f"{self.title} - {self.price_toman} تومان"
 
 
 class VPNConfig(models.Model):

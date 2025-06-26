@@ -17,7 +17,7 @@ from telegram.ext import (
 from telegram.constants import ChatMemberStatus
 from asgiref.sync import sync_to_async
 
-from vpnuser.models import VPNUser, SubscriptionPlan, VPNConfig, PaymentSettings,VPNDelivery
+from vpnuser.models import VPNUser, SubscriptionPlan, VPNConfig, PaymentSettings,VPNDelivery,VPNShowcaseConfig
 
 
 
@@ -321,12 +321,12 @@ async def handle_duration_selection(update: Update, context: ContextTypes.DEFAUL
         return
 
     configs = await sync_to_async(list)(
-        VPNConfig.objects.filter(
-            type=selected_type,
-            subscription_plan_id=plan_id,
-            active=True
-        )
+    VPNShowcaseConfig.objects.filter(
+        type=selected_type,
+        subscription_plan_id=plan_id,
+        active=True
     )
+)
 
     if not configs:
         await query.edit_message_text("❌ برای این مدت هیچ کانفیگی وجود ندارد.")
