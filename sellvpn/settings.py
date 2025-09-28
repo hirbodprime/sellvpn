@@ -25,11 +25,12 @@ SECRET_KEY = 'django-insecure--!_jdf#j3u1shxi#g^^5kl5uj)8b7pfp45k%gqjj2fgl*x%@$b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["hirbots.com","www.hirbots.com"]
-CSRF_TRUSTED_ORIGINS = ["https://hirbots.com","https://www.hirbots.com"]
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ["hirbots.com","www.hirbots.com"]
+# CSRF_TRUSTED_ORIGINS = ["https://hirbots.com","https://www.hirbots.com"]
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 # Application definitionasfdasfd
 

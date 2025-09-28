@@ -592,7 +592,7 @@ async def handle_renewal_confirmation(update: Update, context: ContextTypes.DEFA
         await message.reply_text(f"❌ خطا در ارسال پیام به کاربر: {e}")
 
 
-app = ApplicationBuilder().token("7524638767:AAFDlYKm3WMH0sDLjGSOXaSDiVZSQLUAXi0").concurrent_updates(True).build()
+app = ApplicationBuilder().token("").concurrent_updates(True).build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(handle_config_type_selection, pattern="^configs:(volume|unlimited)$"))
